@@ -1,0 +1,88 @@
+:root{
+  --mtk-red: #c62828;   /* barras superior e inferior */
+  --mtk-blue: #0d6efd;  /* sidebar */
+  --mtk-soft: #f4f6fa;  /* fondo de contenido */
+  --mtk-dark: #1c1c1c;
+}
+
+/* Reset menores para quitar espacios indeseados en barras */
+html, body { height: 100%; }
+body { margin: 0; }
+
+/* Layout general: header y footer rojos sin cortes, contenido ocupa la altura restante */
+.page {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header | main | footer */
+}
+
+.topbar-red, .bottombar-red{
+  background: var(--mtk-red);
+  color: #fff;
+}
+
+.brand-logo{
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.bg-soft{ background: var(--mtk-soft); }
+
+/* Login */
+.card-login{
+  width: 440px;
+  max-width: 96vw;
+  border-radius: 14px;
+  border: 0;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* Sidebar y menú */
+.sidebar-blue{
+  background: var(--mtk-blue);
+  color: #fff;
+  border-radius: 16px;
+  min-height: calc(100vh - 120px); /* alto visible bajo las barras rojas */
+}
+
+#menu .nav-link,
+#menu-pagos .nav-link,
+#menu-actividades .nav-link,
+#menu-rendimiento .nav-link,
+#menu-analisis .nav-link{
+  color:#fff;
+  border-radius: 10px;
+}
+
+#menu .nav-link:hover,
+#menu .nav-link.active,
+#menu-pagos .nav-link:hover,
+#menu-pagos .nav-link.active,
+#menu-actividades .nav-link:hover,
+#menu-actividades .nav-link.active,
+#menu-rendimiento .nav-link:hover,
+#menu-rendimiento .nav-link.active,
+#menu-analisis .nav-link:hover,
+#menu-analisis .nav-link.active{
+  background: rgba(255,255,255,.18);
+}
+
+.menu-title{
+  font-size: .8rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .9;
+  margin-bottom: .35rem;
+  font-weight: 600;
+}
+
+/* Tarjetas de contenido */
+.card{
+  border-radius: 16px;
+  border: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,.06);
+}
+
+/* Quita espacios laterales en pantallas chicas para “aprovechar mejor” */
+.container-fluid.nopad { padding-left: 0; padding-right: 0; }

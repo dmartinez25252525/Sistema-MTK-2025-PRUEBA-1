@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>MTK - Panel</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Tu CSS -->
+  <link href="./css/app.css" rel="stylesheet" />
+</head>
+<body class="page">
+
+  <!-- BARRA SUPERIOR ROJA -->
+  <header class="topbar-red">
+    <div class="container-fluid nopad position-relative d-flex align-items-center justify-content-center py-2">
+      <div class="position-absolute start-0 ms-3 d-flex align-items-center">
+        <img src="./img/Logomtk.png" alt="Logo MTK" class="brand-logo me-2" />
+      </div>
+      <h6 class="m-0 text-white fw-semibold text-center">Marroquín´s Team Kenpo Karate</h6>
+      <div class="position-absolute end-0 me-3 d-flex align-items-center gap-2">
+        <span id="userInfo" class="badge bg-light text-dark"></span>
+        <button id="btnLogout" class="btn btn-light btn-sm">
+          <i class="bi bi-box-arrow-right me-1"></i>Salir
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="bg-soft">
+    <div class="container-fluid py-3">
+      <div class="row g-3">
+        <!-- Sidebar azul -->
+        <div class="col-12 col-md-3 col-lg-2">
+          <aside class="sidebar-blue p-3">
+            <nav>
+              <div class="menu-title">Módulos</div>
+              <ul id="menu" class="nav nav-pills flex-column gap-1 mb-3"></ul>
+
+              <div id="sec-pagos" class="menu-section">
+                <div class="menu-title mt-3">Pagos</div>
+                <ul id="menu-pagos" class="nav nav-pills flex-column gap-1 mb-3"></ul>
+              </div>
+
+              <div id="sec-actividades" class="menu-section">
+                <div class="menu-title mt-3">Actividades</div>
+                <ul id="menu-actividades" class="nav nav-pills flex-column gap-1 mb-3"></ul>
+              </div>
+
+              <div id="sec-rendimiento" class="menu-section">
+                <div class="menu-title mt-3">Rendimiento</div>
+                <ul id="menu-rendimiento" class="nav nav-pills flex-column gap-1 mb-3"></ul>
+              </div>
+
+              <div id="sec-analisis" class="menu-section">
+                <div class="menu-title mt-3">Análisis</div>
+                <ul id="menu-analisis" class="nav nav-pills flex-column gap-1 mb-1"></ul>
+              </div>
+            </nav>
+          </aside>
+        </div>
+
+        <!-- Área principal -->
+        <div class="col-12 col-md-9 col-lg-10">
+          <main id="content" class="card p-4">
+            <h4 class="mb-2">Bienvenido, <span id="welcomeName">—</span></h4>
+            <div class="border-bottom my-2"></div>
+            <p>Selecciona un módulo en la barra izquierda para empezar.</p>
+          </main>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- BARRA INFERIOR ROJA -->
+  <footer class="bottombar-red text-center text-white py-2 small">
+    © 2025 Marroquín´s Team Kenpo Karate - Todos los derechos reservados
+  </footer>
+
+  <!-- Bootstrap JS bundle (¡OBLIGATORIO para Modals, Dropdowns, etc!) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Tus scripts: primero api.js, luego UI -->
+  <script type="module" src="./js/api.js"></script>
+  <script type="module" src="./js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>MTK - Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="./css/app.css" rel="stylesheet" />
+</head>
+<body class="page">
+
+  <!-- BARRA SUPERIOR ROJA (sin márgenes/blancos) -->
+  <header class="topbar-red">
+    <div class="container-fluid nopad position-relative d-flex align-items-center justify-content-center py-2">
+      <img src="./img/Logomtk.png" alt="Logo MTK" class="brand-logo position-absolute start-0 ms-3" />
+      <h6 class="m-0 text-white fw-semibold text-center">Marroquín´s Team Kenpo Karate</h6>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="bg-soft d-flex align-items-center justify-content-center">
+    <div class="card card-login">
+      <div class="card-body p-4 p-md-5">
+        <h3 class="text-center mb-4 fw-bold">Login</h3>
+        <form id="formLogin" novalidate>
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">Usuario / Correo</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-at"></i></span>
+              <input type="email" class="form-control" name="email" required value="AdminDavid@mtk.com" />
+            </div>
+          </div>
+          <div class="mb-2">
+            <label class="form-label small fw-semibold">Contraseña</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+              <input type="password" class="form-control" name="pasword" required value="123" />
+            </div>
+          </div>
+
+          <div id="msg" class="text-danger text-center small my-2" style="min-height: 20px;"></div>
+
+          <button class="btn btn-light w-100 mt-2" type="submit" style="background:#b32626;color:#fff;">
+            Iniciar Sesión
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- BARRA INFERIOR ROJA (sin márgenes/blancos) -->
+  <footer class="bottombar-red text-center text-white py-2 small">
+    © 2025 Marroquín´s Team Kenpo Karate - Todos los derechos reservados
+  </footer>
+
+  <script type="module" src="./js/auth.js"></script>
+</body>
+</html>

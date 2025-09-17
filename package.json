@@ -1,0 +1,19 @@
+{
+  "name": "sistema-mtk-backend",
+  "version": "1.0.0",
+  "description": "API MTK (Node + Express + MariaDB)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.18",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.9.7",
+    "pdfkit": "^0.17.2"
+  }
+}
